@@ -3,7 +3,7 @@ import { loginUser, registerUser } from "../controllers/auth.controller";
 import path from "path";
 
 const authRouter = Router()
-const basePath = '/api/v1'
+const basePath = '/api/v1/auth/'
 
 //INFORMATIVE ROUTE
 authRouter.get('/', (req: Request, res: Response) => {
@@ -11,11 +11,11 @@ authRouter.get('/', (req: Request, res: Response) => {
   res.sendFile(filepath);
 })
 
-/*Login*/
+/*Login*///Ruta: https://auth-server-myxa.onrender.com/api/v1/auth/login
 authRouter.get(`${basePath}/login`, loginUser);
 
-/*Register*/
-authRouter.get(`${basePath}/registro`, registerUser);
+/*Register*///Ruta: https://auth-server-myxa.onrender.com/api/v1/auth/register
+authRouter.get(`${basePath}/register`, registerUser);
 
 
 export default authRouter;
