@@ -31,7 +31,7 @@ export class AuthServer {
   }
 
   routes(): void {
-    this.app.use('/api/v1', authRouter)
+    this.app.use('', authRouter)
   }
 
 
